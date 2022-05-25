@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;900&family=Short+Stack&display=swap');
+
+:root {
+    --primary-color: #03999d;
+    --secondary-color: #36286b;
+    --shadow-color: #57585b;
+}
+
+body {
+    background-color: #1b1b1b !important;
+    color: var(--primary-color) !important;
+}
+
+.card {
+    background-color: #222 !important;
+    border-radius: unset !important;
+    height: 30vh;
+    min-width: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.rayan {
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Short Stack', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 0px;
+}
+
+.discordname {
+    font-size: 1.5em;
+}
+
+.text {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.up {
+    color: #FFF;
+    background-color: var(--primary-color);
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.down {
+    background-color: var(--primary-color);
+    height: 29px;
+}
+
+i {
+    margin: 5px;
+    transition: all 0.2s;
+    color: var(--secondary-color);
+    font-weight: 500 !important;
+}
+
+.hr:hover {
+    cursor: pointer;
+    transform: rotateZ(20deg) scale(1.03);
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    color: var(--primary-color) !important;
+    width: fit-content;
+}
+
+a:hover {
+    color: #03999da3 !important;
+}
+
+.social-icons {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.img {
+    background-image: url("https://cdn.discordapp.com/avatars/280005397983789056/11752b012ac38e5c1fecca3133e665b2.png?size=1024");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
