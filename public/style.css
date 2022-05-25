@@ -5,6 +5,9 @@
     --secondary-color: #36286b;
     --shadow-color: #57585b;
 }
+::selection {
+    color: #95e8eb;
+}
 
 body {
     background-color: #1b1b1b !important;
@@ -29,6 +32,7 @@ body {
     font-weight: bolder;
     font-size: 3em;
     margin: 0px;
+    text-shadow: var(--shadow-color) 3px 3px 1px;
 }
 
 .discordname {
@@ -87,7 +91,6 @@ a:hover {
 }
 
 .img {
-    background-image: url("https://cdn.discordapp.com/avatars/280005397983789056/11752b012ac38e5c1fecca3133e665b2.png?size=1024");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

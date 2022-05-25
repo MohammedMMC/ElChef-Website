@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
 
-    <link rel="icon" href="https://cdn.discordapp.com/avatars/280005397983789056/11752b012ac38e5c1fecca3133e665b2.png">
+    <link rel="icon" href="<%=avatar%>">
     <meta property="og:image"
-        content="https://cdn.discordapp.com/avatars/280005397983789056/11752b012ac38e5c1fecca3133e665b2.png?size=1024">
+        content="<%=avatar%>">
     <meta property="og:description" content="ÉlChef.#0880 - Rayaan">
     <meta property="og:url" content="https://rayaan.cf">
     <meta name="theme-color" content="#03999d">
@@ -22,13 +21,13 @@
 </head>
 
 <body>
-    <i class="fa-duotone fa-star" style="color: var(--primary-color);position: fixed;font-size: 10em;top: 37vh;right: -7vh;transform: rotateZ(31deg);"></i>
-    <i class="fa-duotone fa-stars" style="color: #03999d87;position: fixed;font-size: 10em;top: 29vh;right: 132vh;transform: rotateZ(50deg);"></i>
-    <i class="fa-duotone fa-circle" style="color: #03999dc7;position: fixed;font-size: 5em;top: -3vh;right: 164vh;transform: rotateZ(50deg);"></i>
-    <i class="fa-duotone fa-crown" style="color: #03999dc7;position: fixed;font-size: 5em;top: -2vh;right: 43vh;transform: rotateZ(325deg);"></i>
-    <i class="fa-duotone fa-star-shooting" style="color: #03999dc7;position: fixed;font-size: 12em;top: 11vh;right: 186vh;"></i>
-    <audio id="audio">
-        <source src="https://file-examples.com/storage/fe6bd68931628d5b79b8f47/2017/11/file_example_MP3_1MG.mp3">
+    <i class="fa-duotone fa-star" style="z-index: -1; color: var(--primary-color);position: fixed;font-size: 10em;top: 37vh;right: -7vh;transform: rotateZ(31deg);"></i>
+    <i class="fa-duotone fa-stars" style="z-index: -1; color: #03999d87;position: fixed;font-size: 10em;top: 29vh;right: 132vh;transform: rotateZ(50deg);"></i>
+    <i class="fa-duotone fa-circle" style="z-index: -1; color: #03999dc7;position: fixed;font-size: 5em;top: -3vh;right: 164vh;transform: rotateZ(50deg);"></i>
+    <i class="fa-duotone fa-crown" style="z-index: -1; color: #03999dc7;position: fixed;font-size: 5em;top: -2vh;right: 43vh;transform: rotateZ(325deg);"></i>
+    <i class="fa-duotone fa-star-shooting" style="z-index: -1; color: #03999dc7;position: fixed;font-size: 12em;top: 11vh;right: 186vh;"></i>
+    <audio id="audio" onended="pauseAudio();">
+        <source src="<%=song%>">
     </audio>
     <div class="container-fluid p-4">
         <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
@@ -45,14 +44,14 @@
             </div>
 
             <div id="22" style="margin: 10px; width: 43vh;">
-                <div class="up"><i class="far fa-xmark hr" onclick='document.getElementById("22").style.display = "none";'></i><i style="font-weight: 499 !important;"
+                <div class="up"><i class="far fa-xmark hr" onclick='pauseAudio();document.getElementById("22").style.display = "none";'></i><i style="font-weight: 499 !important;"
                         class="far fa-square hr"></i><i class="far fa-hyphen hr"></i></div>
-                <div class="card img" style="height: 30vh;min-width: 30vh;"></div>
+                <div class="card img" style="background-image: url('<%=avatar%>?size=1024');height: 30vh;min-width: 30vh;"></div>
                 <div class="down" style="text-align: center;font-size: 2em;height: fit-content;">
-                    <i class="fad fa-backward-step"></i>
-                    <i id="playAudio" onclick="playAudio();" class="fad fa-circle-play"></i>
-                    <i id="pauseAudio" style="display: none;" onclick="pauseAudio();" class="fad fa-circle-pause"></i>
-                    <i class="fad fa-forward-step"></i>
+                    <i class="fad fa-backward-step" style="cursor: pointer;"></i>
+                    <i id="playAudio" onclick="playAudio();" style="cursor: pointer;" class="fad fa-circle-play"></i>
+                    <i id="pauseAudio" style="display: none;" onclick="pauseAudio();" style="cursor: pointer;" class="fad fa-circle-pause"></i>
+                    <i class="fad fa-forward-step" style="cursor: pointer;"></i> 
                 </div>
             </div>
 
